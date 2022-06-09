@@ -7,48 +7,48 @@ const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-var replace = require('gulp-replace');
+const replace = require('gulp-replace');
 
 // File paths
-const files = { 
+const files = {
     scssPath: 'src/scss/**/*.scss',
     jsPath: 'src/js/**/*.js'
 };
 
-function scssTask(){    
+function scssTask() {
     return src(files.scssPath)
         .pipe(sourcemaps.init()) // initialize sourcemaps first
         .pipe(sass().on('error', sass.logError)) // compile SCSS to CSS
-        .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
+        .pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins
         .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
         .pipe(dest('dist')
-    ); // put final CSS in dist folder
+        ); // put final CSS in dist folder
 }
 
-function jsTask(){
+function jsTask() {
     return src([
         files.jsPath
-        ])
+    ])
         .pipe(concat('all.js'))
         .pipe(uglify())
         .pipe(dest('dist')
-    );
+        );
 }
 
-var cbString = new Date().getTime();
-function cacheBustTask(){
+const cbString = new Date().getTime();
+function cacheBustTask() {
     return src(['index.html'])
         .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
         .pipe(dest('.'));
 }
 
-function watchTask(){
-    watch([files.scssPath, files.jsPath], 
-        parallel(scssTask, jsTask));    
+function watchTask() {
+    watch([files.scssPath, files.jsPath],
+        parallel(scssTask, jsTask));
 }
 
 exports.default = series(
-    parallel(scssTask, jsTask), 
+    parallel(scssTask, jsTask),
     cacheBustTask,
     watchTask
 );
