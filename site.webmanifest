@@ -1,0 +1,21 @@
+{
+    "name": "Vladimir Kovalov - Recruitment task",
+    "short_name": "Recruitment task",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "description": "Recruitment task for cool company called GravityGlobal",
+    "icons": [
+        {
+            "src": "/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1,c_fill,g_auto__c_scale,w_200",
+            "sizes": "200x200",
+            "type": "image/png"
+        }
+    ],
+    "related_applications": [
+        {
+            "platform": "web",
+            "url": "https://github.com/echo-vladimir/frontend-recruitment-task/blob/master/index.html"
+        }
+    ]
+}
