@@ -1,4 +1,4 @@
-@import 'config', 'reset';
+@import 'config', 'reset', 'article';
 @import url('https://fonts.googleapis.com/css2?family=#{$family}:wght@300;700&display=swap');
 
 body {
@@ -10,10 +10,15 @@ main {
     display: flex;
     justify-content: center;
     max-width: 1440px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 section {
-    max-width: 1110px;
+    width: 1110px;
     margin-top: 96px;
+}
+
+::selection {
+    background: $tertiary;
+    color: $dark;
 }
