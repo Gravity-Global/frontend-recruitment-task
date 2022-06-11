@@ -8,6 +8,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const replace = require('gulp-replace');
+const webpack = require('webpack-stream');
 
 // File paths
 const files = {
@@ -26,13 +27,13 @@ function scssTask() {
 }
 
 function jsTask() {
-    return src([
-        files.jsPath
-    ])
+    return src([files.jsPath])
+        .pipe(webpack({
+            mode: 'development',
+        })) // for using imports
         .pipe(concat('all.js'))
         .pipe(uglify())
-        .pipe(dest('dist')
-        );
+        .pipe(dest('dist'));
 }
 
 const cbString = new Date().getTime();
