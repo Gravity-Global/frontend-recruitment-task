@@ -3,6 +3,7 @@ article {
     justify-content: space-around;
 
     @media (min-width: 992px) and (max-width: 3500px) {
+
         .img-hero,
         .content {
             margin: 2em;
@@ -16,8 +17,11 @@ article {
 
     @media (min-width: 768px) and (max-width: 991px) {
         .content {
-            margin-left: 2em;
+            margin-left: 5em;
             max-width: 380px;
+        }
+        .img-hero {
+            margin-left: 1em;
         }
     }
 
@@ -44,45 +48,12 @@ article {
         display: flex;
         flex-flow: column;
         justify-content: center;
+    }
 
-        h1 {
-            line-height: 120%;
-            font-weight: 700;
-            font-size: 42px;
-            color: $dark;
-        }
-
-        p {
-            line-height: 120%;
-            font-weight: 300;
-            font-size: 16px;
-            margin: 24px 0 32px 0;
-        }
-
-        button {
-            border: none;
-            cursor: pointer;
-            width: 128px;
-            height: 48px;
-            padding: 16px 40px;
-            border-radius: 32px;
-            line-height: 100%;
-            font-weight: 700;
-            font-size: 16px;
-            background: $primary;
-            color: white;
-        }
-
-        button:hover {
-            background: $secondary;
-        }
-
-        @media (prefers-reduced-motion: no-preference) {
-            :focus {
-                transition: outline-offset .25s ease;
-                outline-offset: 4px;
-                outline: 2px solid $tertiary;
-            }
-        }
+    #open {
+        @extend %button;
+        width: 128px;
+        height: 48px;
+        padding: 16px 40px;
     }
 }
