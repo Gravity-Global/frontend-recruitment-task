@@ -1,0 +1,52 @@
+@import '../settings/mixins';
+@import '../elements/fonts';
+@import '../settings/colors';
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $roboto;
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        max-width: 1440px;
+        margin: 96px auto;
+    }
+    .image{
+        display: flex;
+        justify-content: center;
+        img{ 
+            width: 95%;
+            height: auto;
+            border-radius: 15px;
+            padding: 8px 0;
+            @include desktop {
+                width: 505px;
+                height: 330px;
+                padding: 0;
+                border-radius: 0;
+                width: 100%;
+                
+            }
+        }
+    }
+    .content{
+        max-width: 380px;
+        max-height: 250px;
+        padding: 8px;
+        color: $color-black;
+        @include desktop{
+            margin-left: 95px;
+        }
+        .title{
+            font-size: 42px;
+            font-weight: 700;
+        }
+        .text{
+            margin: 24px 0 32px 0;
+            line-height: 150%;
+        }
+        
+    }
+}
