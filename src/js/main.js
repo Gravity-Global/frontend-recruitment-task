@@ -1,25 +1,15 @@
-// document.querySelector('.btn').addEventListener('click', countUp)
-// const displayCount = document.querySelector('.counter');
-
-// let counter = 0;
-// function countUp() {
-//     counter++;
-//     displayCount.innerText++;
-
-//     console.log("pokaż popup na click")
-    
-//     if(counter === 5){
-//         console.log('jest 5 i pokaż reset button');
-//     }
-// }
-
 const openPopup = document.querySelector('.btn');
 const closePopup = document.querySelector('.close-button');
 const popupBackground = document.querySelector('.black-transparent');
+const displayCount = document.querySelector('.strong');
+const resetButton = document.querySelector('.resetButton');
+
+let counter = 0;
 
 openPopup.addEventListener('click', () => {
     const popup = document.querySelector("#popup");
     openPopupFunc(popup);
+    countUp();
 })
 
 closePopup.addEventListener('click', () => {
@@ -31,6 +21,11 @@ popupBackground.addEventListener('click', () => {
     const popup = document.querySelector("#popup.active");
     closePopupFunc(popup);
 })
+
+resetButton.addEventListener('click', () => {
+    counter = 0;
+    displayCount.innerText = `0 times`;
+});
 
 function openPopupFunc(popup){
     if(popup == null){
@@ -46,4 +41,14 @@ function closePopupFunc(popup){
     }
     popup.classList.remove('active');
     popupBackground.classList.remove('active');
+}
+
+function countUp() {
+    counter++;
+    displayCount.innerText = `${counter} times`
+    if(counter >= 5){
+        resetButton.classList.add('active');
+    } else {
+        resetButton.classList.remove('active');
+    }
 }

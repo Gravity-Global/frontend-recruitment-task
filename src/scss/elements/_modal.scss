@@ -20,6 +20,7 @@
     @include desktop{
         width: 920px;
         height: 210px;
+        border-radius: 0;
     }
     .popop-title{
         color: $color-black;
@@ -57,6 +58,9 @@
             padding: 0 95px;
         }
     }
+    .resetButton{
+        
+    }
 }
 .black-transparent{
     position: fixed;
@@ -72,4 +76,5 @@
         pointer-events: all;
         opacity: 1;
     }
+    
 }
