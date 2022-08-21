@@ -1,6 +1,8 @@
 @import '../settings/colors';
 @import '../settings/mixins';
+
 .popup{
+    
     background-color: white;
     position: fixed;
     z-index: 10;
@@ -29,7 +31,7 @@
         line-height: 120%;
         padding: 10px 12px;
         @include desktop{
-            padding: 56px 95px;
+            padding: 56px 0 24px 96px;
         
         }
     }
@@ -49,7 +51,7 @@
         }
     }
     .popup-body{
-        padding: 10px 12px;
+        padding: 0 12px;
         
         .strong{
             font-weight: 700;
