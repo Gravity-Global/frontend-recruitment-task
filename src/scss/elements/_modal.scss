@@ -1,5 +1,5 @@
 @import '../settings/colors';
-
+@import '../settings/mixins';
 .popup{
     background-color: white;
     position: fixed;
@@ -17,14 +17,20 @@
     &.active{
         transform: translate(-50%, -50%) scale(1);
     }
+    @include desktop{
+        width: 920px;
+        height: 210px;
+    }
     .popop-title{
-        
         color: $color-black;
         font-size: 42px;
         font-weight: 700;
         line-height: 120%;
         padding: 10px 12px;
+        @include desktop{
+            padding: 56px 95px;
         
+        }
     }
     .close-button{
         cursor: pointer;
@@ -36,12 +42,19 @@
         position: absolute;
         right: 5px;
         top: 5px;
+        @include desktop{
+            right: 46px;
+            top: 48px;
+        }
     }
     .popup-body{
         padding: 10px 12px;
         
         .strong{
             font-weight: 700;
+        }
+        @include desktop{
+            padding: 0 95px;
         }
     }
 }
