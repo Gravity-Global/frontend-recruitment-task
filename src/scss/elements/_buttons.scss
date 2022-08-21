@@ -6,4 +6,7 @@
     border-radius: 32px;
     background-color: $color-btn-primary;
     border: none;
+    &:hover{
+        cursor: pointer;
+    }
 }
