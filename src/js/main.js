@@ -23,15 +23,14 @@ openPopup.addEventListener('click', () => {
 })
 
 closePopup.addEventListener('click', () => {
-    const popup = button.closest('.popup');
-    openPopupFunc(popup);
-})
-popupBackground.addEventListener('click', ()=>{
-    const popup = document.querySelector('.popups.active');
-    closePopup(popup);
+    const popup = document.querySelector("#popup");
+    closePopupFunc(popup);
 })
 
-
+popupBackground.addEventListener('click', () => {
+    const popup = document.querySelector("#popup.active");
+    closePopupFunc(popup);
+})
 
 function openPopupFunc(popup){
     if(popup == null){
