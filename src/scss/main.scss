@@ -1,4 +1,81 @@
-body {
+
+//colors
+$color-black:#000;
+$color-black-1:#121212;
+$color-primary-1: #E4C1AE;
+$color-primary-1-hover: #D3B29D;
+$color-white: #fff;
+$color-bg-1: #fff;
+
+//font-sizes
+$font-size-base: 16px;
+$font-size-hero: 42px;
+
+*{
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: 'Roboto';
+    background-color: $color-bg-1;
+    color: $color-black-1;
+}
+
+.margin-bottom-s{
+    margin-bottom: 24px;
+}
+
+.margin-top-l {
+    margin-top:32px;
+}
+
+.main-container {
+    display: flex;
+    max-width: 1440px;
+    margin: 96px auto 0;
+    background-color: #f0f;  //to remove
+    justify-content: center;
+    align-items: center;
+    gap: 95px;
+}
+
+.img-hero {
+    width: 505px;
+}
+    
+.main-content{
+ width: 380px;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: $font-size-hero;
+    line-height: 120%;
+    margin-bottom: 24px;
+}
+
+.text-1 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: $font-size-base;
+    line-height: 150%;
+}
+
+.primary-button {
+    border-radius: 32px;
+    height: 48px;
+    padding: 0 40px;
+    color: $color-white;
+    background-color: $color-primary-1;
+    font-size: $font-size-base;
+    border: none;
+    font-weight: 700;
+    margin-top: 32px;
+    transition: 0.3s;
+    &:hover {
+        cursor: pointer;
+        background-color: $color-primary-1-hover;
+    }
 }
