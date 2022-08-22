@@ -4,7 +4,8 @@ const popupBackground = document.querySelector('.black-transparent');
 const displayCount = document.querySelector('.strong');
 const resetButton = document.querySelector('.resetButton');
 
-let counter = 0;
+let counter = 0; 
+counter = localStorage.getItem('counter') || 0;
 
 openPopup.addEventListener('click', () => {
     const popup = document.querySelector("#popup");
@@ -15,6 +16,7 @@ openPopup.addEventListener('click', () => {
 closePopup.addEventListener('click', () => {
     const popup = document.querySelector("#popup");
     closePopupFunc(popup);
+    
 })
 
 popupBackground.addEventListener('click', () => {
@@ -23,8 +25,9 @@ popupBackground.addEventListener('click', () => {
 })
 
 resetButton.addEventListener('click', () => {
-    counter = 0;
     displayCount.innerText = `0 times`;
+    counter = 0;
+    localStorage.clear();
 });
 
 function openPopupFunc(popup){
@@ -45,8 +48,10 @@ function closePopupFunc(popup){
 
 function countUp() {
     counter++;
+    localStorage.setItem('counter', counter);
     displayCount.innerText = `${counter} times`
-    if(counter >= 5){
+    
+    if(counter >= 6){
         resetButton.classList.add('active');
     } else {
         resetButton.classList.remove('active');
