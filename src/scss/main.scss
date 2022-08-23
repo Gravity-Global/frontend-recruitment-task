@@ -6,6 +6,8 @@ $color-primary-1: #E4C1AE;
 $color-primary-1-hover: #D3B29D;
 $color-white: #fff;
 $color-bg-1: #fff;
+$color-bg-popup-container: rgba(18, 18, 18, .5);
+$color-bg-icon-hover: rgba(0, 0, 0, .1);
 
 //font-sizes
 $font-size-base: 16px;
@@ -14,6 +16,7 @@ $font-size-hero: 42px;
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -22,7 +25,8 @@ body {
     color: $color-black-1;
 }
 
-.margin-bottom-s{
+//margins
+.margin-bottom-s {
     margin-bottom: 24px;
 }
 
@@ -30,6 +34,7 @@ body {
     margin-top:32px;
 }
 
+//main content
 .main-container {
     display: flex;
     max-width: 1440px;
@@ -44,8 +49,8 @@ body {
     width: 505px;
 }
     
-.main-content{
- width: 380px;
+.main-content {
+    width: 380px;
 }
 
 h1 {
@@ -78,4 +83,50 @@ h1 {
         cursor: pointer;
         background-color: $color-primary-1-hover;
     }
+}
+
+//popup
+.popup-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-bg-popup-container ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    position: relative;
+    width: calc(100% - 50px);
+    max-width: 920px;
+    min-height: 210px;
+    background-color: $color-bg-1;
+    padding: 56px 95px;
+}
+
+.close-popup-button {
+    $padding: 10px;
+    position: absolute;
+    top: calc(46px - $padding);
+    right: calc(46px - $padding);
+    padding: $padding;
+    cursor: pointer;
+    
+    .close-icon {
+        background-image: url("../images/icon-popup.svg");
+        height: 12px;
+        width: 12px;
+    }
+
+    &:hover {
+        background-color: $color-bg-icon-hover;
+        border-radius: 4px;
+    }
+}
+
+.rotate-90-deg {
+    transform: rotate(90deg);
 }
