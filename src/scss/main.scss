@@ -11,7 +11,14 @@ $color-bg-icon-hover: rgba(0, 0, 0, .1);
 
 //font-sizes
 $font-size-base: 16px;
+$font-size-medium: 32px;
 $font-size-hero: 42px;
+
+//breakpoints
+$breakpoint-tablet-horizontal: 1024px;
+$breakpoint-mobile-horizontal: 800px;
+$breakpoint-tablet-vertical: 600px;
+$breakpoint-mobile-vertical: 450px;
 
 *{
     margin: 0;
@@ -34,23 +41,50 @@ body {
     margin-top:32px;
 }
 
-//main content
 .main-container {
     display: flex;
     max-width: 1440px;
     margin: 96px auto 0;
-    background-color: #f0f;  //to remove
     justify-content: center;
     align-items: center;
     gap: 95px;
+
+    @media only screen and (max-width: $breakpoint-tablet-horizontal) {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile-vertical) {
+        margin-top: 0;
+    }
 }
 
 .img-hero {
+    content: url("../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg");
+    object-fit: cover;
+    max-width: 100%;
     width: 505px;
+
+    @media only screen and (max-width: $breakpoint-tablet-horizontal) {
+        content: url("../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1234.jpg");
+        width: 100%;
+        max-height: 300px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile-vertical) {
+        content: url("../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg");
+        max-height: 250px;
+    }
 }
     
 .main-content {
     width: 380px;
+
+    @media only screen and (max-width: $breakpoint-tablet-horizontal) {
+        width: calc(100% - 60px);
+        max-width: 600px;
+    }
 }
 
 h1 {
@@ -66,6 +100,20 @@ h1 {
     font-weight: 300;
     font-size: $font-size-base;
     line-height: 150%;
+
+    @media only screen and (max-width: $breakpoint-tablet-horizontal) {
+        text-align: justify;
+    }
+}
+
+.button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+    @media only screen and (max-width: $breakpoint-tablet-horizontal) {
+        justify-content: center;
+    }
 }
 
 .primary-button {
@@ -79,13 +127,23 @@ h1 {
     font-weight: 700;
     margin-top: 32px;
     transition: 0.3s;
+
     &:hover {
         cursor: pointer;
         background-color: $color-primary-1-hover;
     }
+
+    @media only screen and (max-width: $breakpoint-tablet-horizontal) {
+        min-width: 300px;
+        max-width: calc(100% - 40px);
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile-vertical) {
+        min-width: 100%;
+        max-width: 100%;
+    }
 }
 
-//popup
 .popup-container {
     position: absolute;
     top: 0;
@@ -96,6 +154,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none; //TODO remove me
 }
 
 .popup {
@@ -105,13 +164,25 @@ h1 {
     min-height: 210px;
     background-color: $color-bg-1;
     padding: 56px 95px;
+
+    @media only screen and (max-width: $breakpoint-tablet-vertical) {
+        padding: 56px 20px;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile-vertical) {
+    .popup-title {
+        font-size: $font-size-medium;
+    }
 }
 
 .close-popup-button {
     $padding: 10px;
+    $position-top: 46px;
+    $position-right: 46px;
     position: absolute;
-    top: calc(46px - $padding);
-    right: calc(46px - $padding);
+    top: calc($position-top - $padding);
+    right: calc($position-right - $padding);
     padding: $padding;
     cursor: pointer;
     
@@ -124,6 +195,15 @@ h1 {
     &:hover {
         background-color: $color-bg-icon-hover;
         border-radius: 4px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-vertical) {
+        $padding: 20px;
+        $position-top: 20px;
+        $position-right: 20px;
+        top: calc($position-top - $padding);
+        right: calc($position-right - $padding);
+        padding: $padding;
     }
 }
 
