@@ -30,18 +30,22 @@
           quisquam nobis voluptatum temporibus.
         </p>
 
-        <button onclick="popupFunction()">Button</button>
+        <button onclick="popupFunction()" class="clickButton" id="clickButton">
+          Button
+        </button>
+        <button class="reset" id="reset" onclick="resetFunction()">
+          Reset
+        </button>
       </div>
-      
     </div>
     <div class="popup">
       <span class="popuptext" id="myPopup">
         <a onclick="closeFunction()" href="#" class="close"></a>
         <h1>Alert!</h1>
-        <p>You have clicked to related button</p>
+        <p>You have clicked <span class="counter">0</span> to related button</p>
       </span>
     </div>
-    
+
     <script src="src/js/main.js"></script>
   </body>
 </html>
