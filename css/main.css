@@ -133,7 +133,6 @@ html body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  visibility: hidden;
 }
 .container .art__modal-wrap__popup {
   -webkit-box-sizing: border-box;
@@ -163,6 +162,8 @@ html body {
   position: absolute;
   top: 30px;
   right: clamp(30px, 5vw, 35px);
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
   width: 21px;
   height: 21px;
 }
@@ -171,6 +172,14 @@ html body {
 }
 .container .art__modal-wrap__popup__resetBtn {
   margin: 10px 0 16px 0;
+  background-color: magenta;
+  color: #121212;
+  border: none;
+  border-radius: 32px;
+  padding: 16px 40px;
+  font-weight: 700;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
 .container .art__modal-wrap__popup__resetBtn:hover {
   cursor: pointer;
