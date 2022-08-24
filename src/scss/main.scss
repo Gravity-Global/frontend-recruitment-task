@@ -6,6 +6,9 @@
   box-sizing: border-box;
   font-family: "Roboto", Georgia, Times, "Times New Roman", serif;
 }
+button:focus {
+  outline: rgb(93, 93, 202) auto 5px;
+}
 
 // Variables - START
 

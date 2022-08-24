@@ -4,6 +4,7 @@ const modal = document.getElementById("modal");
 const resetBtn = document.querySelector(".reset_btn");
 const counter = document.querySelector(".span_counter");
 
+// Popup logic - START
 const openPopUp = () => {
   modal.classList.add("fade");
   setTimeout(() => {
@@ -18,6 +19,16 @@ const closePopUp = () => {
     modal.classList.remove("fade_out");
   }, 450);
 };
+
+// Popup accessibility logic - escape key for closing
+
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Escape" || (e.keyCode === 27 && !modal.classList.contains("hidden"))) {
+    closePopUp();
+  }
+});
+
+// Popup logic - END
 
 openBtn.addEventListener("click", openPopUp);
 closeBtn.addEventListener("click", closePopUp);
