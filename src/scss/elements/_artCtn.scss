@@ -96,7 +96,7 @@
 			background-color: rgba(18, 18, 18, 0.5);
 			@include flex;
 			justify-content: center;
-			// visibility: hidden;
+			visibility: hidden;
 
 			&__popup {
 				box-sizing: border-box;
@@ -147,7 +147,7 @@
 
 					&:hover {
 						cursor: pointer;
-						background-color: lighten($primary, 2%);
+						background-color: lighten($resetBtn, 30%);
 					}
 				}
 			}

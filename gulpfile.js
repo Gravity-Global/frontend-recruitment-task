@@ -45,8 +45,8 @@ function cacheBustTask(){
 }
 
 function watchTask(){
-    watch([files.scssPath, files.jsPath], 
-        parallel(scssTask, jsTask));    
+    watch(files.scssPath, parallel(scssTask));
+watch(files.jsPath, parallel(jsTask));    
 }
 
 exports.default = series(

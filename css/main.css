@@ -133,6 +133,7 @@ html body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  visibility: hidden;
 }
 .container .art__modal-wrap__popup {
   -webkit-box-sizing: border-box;
@@ -183,5 +184,5 @@ html body {
 }
 .container .art__modal-wrap__popup__resetBtn:hover {
   cursor: pointer;
-  background-color: #e7c7b6;
+  background-color: #ff99ff;
 }/*# sourceMappingURL=main.css.map */
