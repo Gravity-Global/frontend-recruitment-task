@@ -19,22 +19,23 @@
             <h1 class="margin-bottom-s">Lorem Ipsum</h1>
             <p class="text-1">Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.</p>
             <div class="button-wrapper">
-                <button class="primary-button margin-top-l">Button</button>
+                <button onclick="openCounterPopup()" class="primary-button margin-top-l">Button</button>
             </div>
         </div>
     </div>
-    <div class="popup-container">
-        <div class="popup">
+    <div onclick="closePopup()" id="popup-1" class="popup-container hidden">
+        <div onclick="event.stopPropagation()" class="popup">
             <h1 class="popup-title">Alert!</h1>
-            <p class="popup-info">You have clicked <span>X</span> times to related button.</p>
-            <button class="button-reset margin-top-xs">Reset counter</button>
-            <div class="close-popup-button">
+            <p class="popup-info">You have clicked <span id="counter-text">X</span> times to related button.</p>
+            <button onclick="resetCounter()" id="button-reset" class="button-reset margin-top-xs hidden">Reset counter</button>
+            <div onclick="closePopup()" class="close-popup-button">
                 <div class="icon-wraper">
                     <div class="close-icon"></div>
                     <div class="close-icon rotate-90-deg"></div>
                 </div>
             </div>
-            
         </div>
-    </div>      
+    </div>   
+    
+    <script src="src/js/main.js"></script>
 </body>
