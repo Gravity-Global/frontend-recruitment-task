@@ -122,6 +122,8 @@ $desktopSize: 1440px;
   }
 }
 
+// Animations - START
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -138,3 +140,5 @@ $desktopSize: 1440px;
     opacity: 1;
   }
 }
+
+// Animations - END
