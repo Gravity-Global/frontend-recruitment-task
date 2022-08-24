@@ -59,6 +59,7 @@ body {
     line-height: 150%;
   }
 
+  
   button {
     display: flex;
     flex-direction: row;
@@ -76,8 +77,10 @@ body {
     line-height: 100%;
     color: #ffffff;
     cursor: pointer;
+    margin-bottom: 10px;
   }
 }
+
 
 .popup .popuptext {
   visibility: hidden;
@@ -133,6 +136,10 @@ body {
   .close:after {
     transform: rotate(-45deg);
   }
+}
+
+.reset{
+  visibility: hidden;
 }
 
 .popup .show {

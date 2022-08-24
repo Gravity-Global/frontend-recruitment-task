@@ -70,6 +70,7 @@ body {
   line-height: 100%;
   color: #ffffff;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .popup .popuptext {
@@ -120,6 +121,10 @@ body {
 }
 .popup .popuptext .close:after {
   transform: rotate(-45deg);
+}
+
+.reset {
+  visibility: hidden;
 }
 
 .popup .show {
