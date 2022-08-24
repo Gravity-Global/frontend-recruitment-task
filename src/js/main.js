@@ -45,6 +45,8 @@ function openPopUp() {
   }, 250);
   counter.textContent = sessionStorage.getItem("NOC");
   checkCounts(counts);
+  //   Prevent from clicking when modal is open
+  openBtn.setAttribute("disabled", "");
 }
 
 function closePopUp() {
@@ -53,6 +55,8 @@ function closePopUp() {
     modal.classList.add("hidden");
     modal.classList.remove("fade_out");
   }, 450);
+  //   Remove disabled attribute
+  openBtn.disabled = false;
 }
 
 // Popup accessibility logic - escape key for closing
@@ -76,14 +80,11 @@ window.addEventListener("resize", () => {
   let size = window.innerWidth;
   if (size < 768) {
     console.log("elo");
-    image.src =
-      "images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg";
+    image.src = "images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg";
   } else if (size >= 768 && size < 1440) {
-    image.src =
-      "images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg";
+    image.src = "images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg";
   } else if (size >= 1440) {
-    image.src =
-      "images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg";
+    image.src = "images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg";
   }
 });
 
