@@ -8,12 +8,10 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="stylesheet" href="./src/css/main.css" />
-    <title>Szymon Ciurkiewicz - Recruitment task</title>
+    <title>[Szymon] [Ciurkiewicz] - Recruitment task</title>
   </head>
   <body>
     <div class="mainContainer">
-
-        <div class="flexContainer">
         <section class="photoContainer">
           <img
             src="./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg"
@@ -22,17 +20,30 @@
           />
         </section>
         <section class="textContainer">
-          <h1>Lorem Ipsum</h1>
+            <div class="textPadding">
+                <h1>Lorem Ipsum</h1>
           <span
             >Infinitely scalable, feature-rich and cloud-native data management
             and protection for modern and legacy infrastructures and SaaS
             platforms, managed via a single app with no hardware required.</span
           >
           <div>
-            <button class="button" onclick="test()">Button</button>
+            <button class="button" id="showPopupButton">Button</button>
           </div>
+        </div>
+
         </section>
-      </div>
+        <div id="Popup" class="popup">
+          <div class="popup-content">
+            <span class="close">&times;</span>
+            <h1>Alert!</h1>
+            <p class="popUpClick">You have clicked 0 times to relatedButton</p>
+            <button class="closeButton" id="resetButton">Reset Counter</button>
+          </div>
+        </div>
+      <div class="popUp"></div>
+    </div>
+      <body>
 
     <script src="./src/js/main.js"></script>
   </body>
