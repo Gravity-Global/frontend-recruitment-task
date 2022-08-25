@@ -7,7 +7,9 @@ const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-var replace = require('gulp-replace');
+const replace = require('gulp-replace');
+
+
 
 // File paths
 const files = { 

@@ -1,9 +1,9 @@
 // getting vars
-const showPopupBtn = document.querySelector('.art__content__button');
-const modalWrap = document.querySelector('.art__modal-wrap');
-const closeBtn = document.querySelector('.art__modal-wrap__popup__closeBtn');
+const showPopupBtn = document.querySelector('.art__btn');
+const modalWrap = document.querySelector('.modal-wrap');
+const closeBtn = document.querySelector('.modal-wrap__closeBtn');
 const showCounter = document.querySelector('.click-counter');
-const resetBtn = document.querySelector('.art__modal-wrap__popup__resetBtn');
+const resetBtn = document.querySelector('.modal-wrap__resetBtn');
 
 //showing popup window;
 showPopupBtn.addEventListener('click', () => {
@@ -16,7 +16,7 @@ showPopupBtn.addEventListener('click', () => {
 
 
     // showing resetBtn if condition is met;
-    showClicks > 5 ? resetBtn.style.display = 'block' : resetBtn.style.display = 'none';
+    resetBtn.style.display = showClicks > 5 ? 'block' : 'none';
 });
 
 
@@ -25,10 +25,13 @@ showPopupBtn.addEventListener('click', () => {
 const hideModal = () => modalWrap.style.visibility = 'hidden';
 
 modalWrap.addEventListener('click', e => {
-    if (e.target.className === 'art__modal-wrap') hideModal();
+    if (e.target.className === 'modal-wrap') hideModal();
 
 })
-closeBtn.addEventListener('click', () => hideModal());
+closeBtn.addEventListener('click', e =>  {
+    if (e.target.className === 'modal-wrap__closeBtn') hideModal()
+});
+
 
 
 //reseting local clicks; hiding popup window

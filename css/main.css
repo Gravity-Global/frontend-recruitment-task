@@ -6,6 +6,14 @@ html body {
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  height: 100%;
+}
+html body {
+  min-height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
 .container {
   max-width: 1440px;
   -webkit-box-sizing: border-box;
@@ -38,6 +46,7 @@ html body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 50%;
 }
 @media (orientation: landscape) {
   .container .art {
@@ -72,37 +81,37 @@ html body {
     margin-left: clamp(30px, 6.5vw, 95px);
   }
 }
-.container .art__content__tittle {
+.container .art__tittle {
   font-size: clamp(24px, 7.7vmin, 42px);
   font-weight: 700;
   margin-top: 0.85em;
 }
 @media (orientation: landscape) {
-  .container .art__content__tittle {
+  .container .art__tittle {
     margin-top: 0;
   }
 }
 @media (min-height: 600px) {
-  .container .art__content__tittle {
+  .container .art__tittle {
     margin-bottom: 0;
   }
 }
 @media (min-width: 1024px) {
-  .container .art__content__tittle {
+  .container .art__tittle {
     font-size: clamp(24px, 6vmin, 42px);
     margin-bottom: 2em;
   }
 }
-.container .art__content__text {
+.container .art__text {
   line-height: clamp(22px, 2.9vh, 24px);
   font-size: clamp(12px, 4vmin, 16px);
 }
 @media (min-width: 768px) and (orientation: portrait) {
-  .container .art__content__text {
+  .container .art__text {
     padding: 0 70px;
   }
 }
-.container .art__content__button {
+.container .art__btn {
   background-color: #E4C1AE;
   color: white;
   border: none;
@@ -113,11 +122,11 @@ html body {
   transition: background-color 0.2s;
   margin-top: 0.5em;
 }
-.container .art__content__button:hover {
+.container .art__btn:hover {
   cursor: pointer;
   background-color: #e7c7b6;
 }
-.container .art__modal-wrap {
+.container .modal-wrap {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -135,43 +144,48 @@ html body {
           justify-content: center;
   visibility: hidden;
 }
-.container .art__modal-wrap__popup {
+.container .modal-wrap__popup {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
   width: 85%;
   max-width: 920px;
-  background-color: #e5e5e5;
+  background-color: #bfb5b5;
   padding: clamp(10px, 6.5vmin, 40px) clamp(24px, 10vw, 95px);
 }
-.container .art__modal-wrap__popup__tittle {
+.container .modal-wrap__tittle {
   font-size: clamp(24px, 7.7vmin, 42px);
   font-weight: 700;
   margin: 16px 0;
+  cursor: pointer;
 }
 @media (min-width: 1024px) {
-  .container .art__modal-wrap__popup__tittle {
+  .container .modal-wrap__tittle {
     font-size: clamp(24px, 5.5vmin, 42px);
   }
 }
-.container .art__modal-wrap__popup__info {
+.container .modal-wrap__info {
   line-height: 24px;
   margin-top: clamp(16px, 2vw, 24px);
   margin-bottom: clamp(16px, 2vw, 24px);
+  cursor: pointer;
 }
-.container .art__modal-wrap__popup__closeBtn {
+.container .modal-wrap__closeBtn {
   position: absolute;
   top: 30px;
+  background-color: rgba(15, 15, 15, 0.5);
+  color: white;
   right: clamp(30px, 5vw, 35px);
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   width: 21px;
   height: 21px;
 }
-.container .art__modal-wrap__popup__closeBtn:hover {
+.container .modal-wrap__closeBtn:hover {
   cursor: pointer;
+  background-color: rgba(92, 92, 92, 0.5);
 }
-.container .art__modal-wrap__popup__resetBtn {
+.container .modal-wrap__resetBtn {
   margin: 10px 0 16px 0;
   background-color: magenta;
   color: #121212;
@@ -182,7 +196,7 @@ html body {
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
-.container .art__modal-wrap__popup__resetBtn:hover {
+.container .modal-wrap__resetBtn:hover {
   cursor: pointer;
   background-color: #ff99ff;
 }/*# sourceMappingURL=main.css.map */
