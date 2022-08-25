@@ -5,78 +5,51 @@
 
 .container {
 	max-width: 1440px;
+	height: 100vh;
 	box-sizing: border-box;
 	padding: 7vw;
 	margin: 0 auto;
 
-	@media (orientation: landscape) {
-		@include flex;
-		padding: 7.1vw 4vw;
-	}
-
-	@media (min-width: 780px) and (max-height: 415px) {
-		padding: 2.2vw 4vw;
-	}
-
-	@media (min-width: 962px) {
-		padding: 5vw 8.2vw;
-	}
+	// @media screen and (max-width:783px){
+	//     flex-direction: column;
+	//     align-items: center;
+	//     justify-content: start;
+	// }
 
 	.art {
 		display: flex;
 		max-width: 50%;
 
-		@media (orientation: landscape) {
-			@include flex;
-		}
-
 		&__img-cnt {
 			flex-basis: 48%;
+			margin-right: calc(100vw * 0.0659722);
 
 			&__img {
-				display: block;
-				width: 100%;
-				max-height: 90vh;
+				width: calc(100vw * 0.35);
+				height: auto;
 			}
 		}
 
 		&__content {
 			justify-content: space-between;
-			text-align: center;
+			text-align: left;
 			flex-basis: 50%;
-
-			@media (orientation: landscape) {
-				text-align: left;
-				margin-left: clamp(30px, 6.5vw, 95px);
-			}
 		}
 
 		&__tittle {
 			font-size: $tittleFontSize;
 			font-weight: 700;
 			margin-top: 0.85em;
-
-			@media (orientation: landscape) {
-				margin-top: 0;
-			}
-
-			@media (min-height: 600px) {
-				margin-bottom: 0;
-			}
-
-			@media (min-width: 1024px) {
-				font-size: clamp(24px, 6vmin, 42px);
-				margin-bottom: 2em;
-			}
 		}
 
 		&__text {
 			line-height: clamp(22px, 2.9vh, 24px);
 			font-size: clamp(12px, 4vmin, 16px);
-
-			@media (min-width: 768px) and (orientation: portrait) {
-				padding: 0 70px;
-			}
+			margin-top: calc(100vw * 0.01666);
+			width: calc(100vw * 0.26);
+			font-weight: 300;
+			font-style: normal;
+			color: #121212;
 		}
 
 		&__btn {
@@ -114,10 +87,6 @@
 			font-weight: 700;
 			margin: 16px 0;
 			cursor: pointer;
-
-			@media (min-width: 1024px) {
-				font-size: clamp(24px, 5.5vmin, 42px);
-			}
 		}
 
 		&__info {
@@ -160,3 +129,26 @@
 		}
 	}
 }
+
+
+  @media only screen and (max-width: 850px) {
+	.container {
+		.art {
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+
+		  img {
+			  max-height: 100%;
+			  max-width: 150%;}
+	  }
+	}
+	.art__content {
+	  margin: 0;
+	}
+  
+	.modal-wrap__popup {
+	 max-width: 150%;
+	 margin: 0 auto;
+	}
+  }
