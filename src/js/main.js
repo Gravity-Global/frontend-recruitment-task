@@ -79,7 +79,6 @@ document.addEventListener("click", (e) => {
 window.addEventListener("resize", () => {
   let size = window.innerWidth;
   if (size < 768) {
-    console.log("elo");
     image.src = "images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg";
   } else if (size >= 768 && size < 1440) {
     image.src = "images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg";
