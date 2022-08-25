@@ -54,7 +54,7 @@ function closePopUp() {
   setTimeout(() => {
     modal.classList.add("hidden");
     modal.classList.remove("fade_out");
-  }, 450);
+  }, 400);
   //   Remove disabled attribute
   openBtn.disabled = false;
 }
