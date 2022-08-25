@@ -1,10 +1,13 @@
-var counterPopup = document.getElementById("popup-1");
-var counterText = document.getElementById("counter-text");
-var buttonReset = document.getElementById("button-reset");
-var clicksCounter = 0;
+const counterPopup = document.getElementById("popup-1");
+const counterText = document.getElementById("counter-text");
+const buttonReset = document.getElementById("button-reset");
+let clicksCounter = 0;
+
+loadCounter();
 
 function openCounterPopup() {
     clicksCounter++;
+    saveCounter();
     counterText.innerHTML = clicksCounter;
     showElement(counterPopup);
 
@@ -19,6 +22,7 @@ function closePopup() {
 
 function resetCounter() {
     clicksCounter = 0;
+    saveCounter();
     counterText.innerHTML = clicksCounter;
     hideElement(buttonReset);
 }
@@ -29,4 +33,11 @@ function hideElement(htmlElement) {
 
 function showElement(htmlElement) {
     htmlElement.classList.remove("hidden");
+}
+
+function saveCounter() {
+    localStorage.setItem('clicksCounter', clicksCounter);
+}
+function loadCounter() {
+    clicksCounter = localStorage.getItem('clicksCounter');
 }
