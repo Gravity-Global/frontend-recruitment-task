@@ -18,20 +18,32 @@ html body {
   max-width: 1440px;
 }
 .container .art {
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 1%;
-  max-width: 100%;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .container .art__img-cnt {
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
   margin-right: 6.59722vw;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 .container .art__img-cnt__img {
-  width: 505px;
-  height: 330px;
+  max-width: 150%;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
 }
 .container .art__content {
   -webkit-box-pack: justify;
@@ -158,10 +170,23 @@ html body {
     max-height: 100%;
     max-width: 150%;
   }
-  .art__content {
+  .container .art__content {
+    max-width: 100px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    justify-items: flex-start;
+    justify-self: flex-start;
+  }
+  .container .art_info {
     margin: 0;
   }
-  .modal-wrap__popup {
+  .container .modal-wrap__popup {
     max-width: 150%;
     margin: 0 auto;
   }
