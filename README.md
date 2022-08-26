@@ -8,7 +8,7 @@ WCAG info:
 
 ## Demo
 
-//work in progres ;)
+https://sciurkiewicz.github.io/frontend-recruitment-task/
 
 ## Project Setup
 
