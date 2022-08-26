@@ -1,0 +1,1 @@
+function createModule(){var e=e=>{var t=document.createElement("div");return t.classList.add(e),e=t,t=".main-container",document.querySelector(t).appendChild(e)};e("section"),e("section")}createModule();export{createModule};
