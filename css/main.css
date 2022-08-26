@@ -16,17 +16,13 @@ html body {
 
 .container {
   max-width: 1440px;
-  height: 100vh;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 7vw;
-  margin: 0 auto;
 }
 .container .art {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 50%;
+  padding: 1%;
+  max-width: 100%;
 }
 .container .art__img-cnt {
   -ms-flex-preferred-size: 48%;
@@ -34,8 +30,8 @@ html body {
   margin-right: 6.59722vw;
 }
 .container .art__img-cnt__img {
-  width: 35vw;
-  height: auto;
+  width: 505px;
+  height: 330px;
 }
 .container .art__content {
   -webkit-box-pack: justify;
@@ -54,10 +50,11 @@ html body {
   line-height: clamp(22px, 2.9vh, 24px);
   font-size: clamp(12px, 4vmin, 16px);
   margin-top: 1.666vw;
-  width: 26vw;
+  width: 20vw;
   font-weight: 300;
   font-style: normal;
   color: #121212;
+  padding: 1%;
 }
 .container .art__btn {
   background-color: #E4C1AE;
@@ -144,7 +141,7 @@ html body {
   background-color: #ff99ff;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 700px) {
   .container .art {
     display: -webkit-box;
     display: -ms-flexbox;
