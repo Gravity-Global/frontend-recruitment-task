@@ -1,50 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="stylesheet" href="./dist/main.css" />
-    <title>[Szymon] [Ciurkiewicz] - Recruitment task</title>
-  </head>
-  <body>
-    <div class="mainContainer">
-        <section class="photoContainer">
-          <img
-            src="./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg"
-            alt="Landscape Photo"
-            class="image"
-          />
-        </section>
-        <section class="textContainer">
+<html lang="pl">
+   <head>
+      <meta charset="utf-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, shrink-to-fit=no"
+         />
+      <link rel="stylesheet" href="./dist/main.css" />
+      <title>[Szymon] [Ciurkiewicz] - Recruitment task</title>
+   </head>
+   <body>
+      <div class="mainContainer">
+         <section class="photoContainer">
+            <img
+               src="./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg"
+               alt="Landscape Photo"
+               class="image"
+               />
+         </section>
+         <section class="textContainer">
             <div class="textPadding">
-                <h1>Lorem Ipsum</h1>
-          <span
-            >Infinitely scalable, feature-rich and cloud-native data management
-            and protection for modern and legacy infrastructures and SaaS
-            platforms, managed via a single app with no hardware required.</span
-          >
-          <div>
-            <button class="button" id="showPopupButton">Button</button>
-          </div>
-        </div>
-
-        </section>
-        <div id="Popup" class="popup">
-          <div class="popup-content">
-            <span class="close">&times;</span>
-            <h1>Alert!</h1>
-            <p class="popUpClick">You have clicked 0 times to relatedButton</p>
-            <button class="closeButton" id="resetButton">Reset Counter</button>
-          </div>
-        </div>
-      <div class="popUp"></div>
-    </div>
+               <h1>Lorem Ipsum</h1>
+               <span
+                  >Infinitely scalable, feature-rich and cloud-native data management
+               and protection for modern and legacy infrastructures and SaaS
+               platforms, managed via a single app with no hardware required.</span
+                  >
+               <div>
+                  <button class="showPopupButton" onclick="showPopup()">Button</button>
+               </div>
+            </div>
+         </section>
+         <div class="Popup" onkeypress="escapeClose()">
+            <div class="popup-content">
+               <button class="close">&times;</button>
+               <h1>Alert!</h1>
+               <p class="popUpClick">You have clicked 0 times to relatedButton</p>
+               <button class="resetButton">Reset Counter</button>
+            </div>
+         </div>
+         <div class="popUp"></div>
+      </div>
       <body>
-
-    <script src="./dist/all.js"></script>
-  </body>
+         <script src="./dist/all.js"></script>
+   </body>
 </html>

@@ -4,6 +4,7 @@ $background: #e5e5e5;
 $primary: #e4c1ae;
 $dark: #121212;
 $close: #f44336;
+
 body {
   margin: 0px;
   font-family: "Roboto", sans-serif;
@@ -40,7 +41,7 @@ h1 {
   margin-left: 95px;
   margin-top: 136px;
 }
-.button {
+.showPopupButton {
   background-color: $primary;
   border: none;
   color: white;
@@ -53,7 +54,7 @@ h1 {
   margin-top: 10%;
   cursor: pointer;
 }
-.closeButton {
+.resetButton {
   background-color: $close;
   border: none;
   color: white;
@@ -65,7 +66,7 @@ h1 {
   font-size: 16px;
   cursor: pointer;
 }
-.popup {
+.Popup {
   display: none;
   position: fixed;
   z-index: 1;
@@ -87,9 +88,12 @@ h1 {
 }
 .close {
   color: #aaaaaa;
+  background-color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  text-decoration: none;
+  border: none;
   &:hover {
     color: #000;
     text-decoration: none;
