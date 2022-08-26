@@ -6,3 +6,4 @@ const descriptionText = `Infinitely scalable, feature-rich and cloud-native data
 const buttonText = "Button";
 
 createModule(imagePath, titleText, descriptionText, buttonText);
+createPopup();

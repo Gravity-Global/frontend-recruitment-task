@@ -1,4 +1,4 @@
-export function createModule(imageUrl, titleText, descriptionText, buttonText) {
+function createModule(imageUrl, titleText, descriptionText, buttonText) {
   const createDiv = () => document.createElement("div");
   const addClass = (element, className) => element.classList.add(className);
 
