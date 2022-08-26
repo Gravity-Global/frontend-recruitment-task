@@ -1,5 +1,12 @@
 $containerWidth: 1440px;
 
+@mixin section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .main-container {
   max-width: $containerWidth;
   width: 100%;
@@ -9,9 +16,14 @@ $containerWidth: 1440px;
   flex-direction: row;
 }
 
-.section {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+.image-section {
+  @include section;
+
+  .image {
+    margin: 10%;
+  }
+}
+
+.content-section {
+  @include section;
 }

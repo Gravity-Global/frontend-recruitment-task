@@ -1,4 +1,4 @@
-export function createModule() {
+export function createModule(imageUrl) {
   const createDiv = () => document.createElement("div");
   const addClass = (element, className) => element.classList.add(className);
   const appendChild = (element, container) =>
@@ -10,6 +10,14 @@ export function createModule() {
     return appendChild(div, ".main-container");
   };
 
-  createBox("section");
-  createBox("section");
+  //adding two columns to main-container
+  createBox("image-section");
+  createBox("content-section");
+
+  //adding image to image-section
+  const image = document.createElement("img");
+  addClass(image, "image");
+  image.setAttribute("src", imageUrl);
+  document.querySelector(".image-section").appendChild(image);
+  appendChild(image, ".image-section");
 }
