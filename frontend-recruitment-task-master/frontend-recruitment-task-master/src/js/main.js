@@ -16,7 +16,6 @@ const reset = document.querySelector(resetQuerySelector);
 reset.addEventListener("click", ()=>{
     sessionStorage.clickcount = 0;
     popup.classList.remove("show");
-    document.getElementById('icon').style.display="none";
     document.getElementById('button').style.opacity="1";
     document.getElementById('opacity').style.display="none";
 })
