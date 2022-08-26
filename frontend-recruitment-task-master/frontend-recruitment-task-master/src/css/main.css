@@ -1,0 +1,170 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    width: 1440px;
+    height: 960px;
+    background: #FFFFFF;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #121212;
+}
+section{
+    width: 100%;
+    max-width: 1440px;
+    height: 960px;
+}
+.top{
+    position: relative;
+    width: 100%;
+    height: 96px;
+    float: left;
+}
+.contener{
+    width: 70%;
+    height: 30%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.contener img{
+    position: relative;
+    width: 57%;
+    height: 330px;
+    float:left;
+}
+.contener nav{
+    width: 380px;
+    height: 250px;
+    float:left;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.contener nav h1{
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 120%;
+    margin-bottom: 5%;
+}
+.contener nav span{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 5%;
+}
+#opacity{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    
+    background:#121212;
+    opacity: 0.5;
+    display: none;
+}
+#reset.show{
+    display:block;
+}
+#reset, #button{
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 40px;
+    gap:10px;
+    background: #E4C1AE;
+    border-radius: 32px;
+    border:none;
+    width: 128px;
+    height: 48px;
+}
+#reset{
+    position: relative;
+    display: none;
+    top:47%;
+    left:4%;
+    float:right;
+}
+#reset p, #button p{
+    width: 48px;
+    height: 16px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%; 
+
+    color:white;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+#button{
+    display: block;
+    margin-top: 5%;
+}
+#alert.show {
+    display: block;
+  }
+#alert{
+    display:none;
+    position:relative;
+    width: 920px;
+    height: 210px;
+    left: 17%;
+
+    transform: translate(0, -30%);
+    background: #FFFFFF;
+    clear: both;
+}
+#alert h1{
+    position: relative;
+    float: left;
+    width: 380px;
+    height: 50px;
+
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 120%;
+
+    margin-left: 10%;
+    margin-top: 5%;
+}
+#alert span{    
+    position: relative;
+    float: left;
+    width: 380px;
+    height: 24px;
+    top:45%;
+    left: -41%;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+}
+#icon{
+    position: relative;
+    float:right;
+    width: 24px;
+    height: 24px;
+    margin-right: 5%;
+}
+
+#icon:before, #icon:after{
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom:25;
+
+    content:' ';
+
+    border: 2px solid #000000;
+    background-color: #000000;
+    
+}
+#icon:before{
+    transform: rotate(45deg);
+}
+#icon:after{
+    transform: rotate(-45deg);
+}
