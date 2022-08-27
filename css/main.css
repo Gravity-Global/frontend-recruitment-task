@@ -16,6 +16,9 @@ html body {
 
 .container {
   max-width: 1440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .container .art {
   max-width: 100%;
@@ -24,6 +27,7 @@ html body {
   display: flex;
   padding: 1%;
   margin: 0 auto;
+  margin-top: 96px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -32,18 +36,12 @@ html body {
           align-items: center;
 }
 .container .art__img-cnt {
-  -ms-flex-preferred-size: 48%;
-      flex-basis: 48%;
   margin-right: 6.59722vw;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
 }
-.container .art__img-cnt__img {
-  max-width: 150%;
-  max-height: -webkit-max-content;
-  max-height: -moz-max-content;
-  max-height: max-content;
+.container .art__img-cnt img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 450/450;
 }
 .container .art__content {
   -webkit-box-pack: justify;
@@ -165,13 +163,10 @@ html body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .container .art img {
-    max-height: 100%;
-    max-width: 150%;
+    margin-left: 10px;
   }
   .container .art__content {
-    max-width: 100px;
+    max-width: 500px;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -183,8 +178,15 @@ html body {
     justify-items: flex-start;
     justify-self: flex-start;
   }
-  .container .art_info {
+  .container .art__title {
+    text-align: center;
+  }
+  .container .art__text {
     margin: 0;
+    width: 70vw;
+  }
+  .container .art__btn {
+    padding: 8px 24px;
   }
   .container .modal-wrap__popup {
     max-width: 150%;
