@@ -105,7 +105,7 @@ html body {
   position: relative;
   width: 85%;
   max-width: 920px;
-  background-color: #bfb5b5;
+  background-color: white;
   padding: clamp(10px, 6.5vmin, 40px) clamp(24px, 10vw, 95px);
 }
 .container .modal-wrap__tittle {
@@ -163,10 +163,10 @@ html body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0 10px;
+    margin: 0 auto;
   }
   .container .art__img {
-    width: 90%;
+    width: 100%;
   }
   .container .art__content {
     margin: 0 auto;
@@ -177,8 +177,9 @@ html body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    justify-items: flex-start;
-    justify-self: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .container .art__title {
     text-align: center;
@@ -188,7 +189,7 @@ html body {
     width: 70vw;
   }
   .container .art__btn {
-    padding: 8px 24px;
+    padding: 8px 12px;
   }
   .container .modal-wrap__popup {
     max-width: 150%;
