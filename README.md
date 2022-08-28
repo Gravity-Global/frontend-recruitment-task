@@ -9,7 +9,7 @@ Funkcjonalności są napisane w czystym JavaScript, ze standardami ES6.
 ### Wykonane zadania wg specyfikacji
 1. Zmieniono tytuł strony.
 2. Stworzono sekcję strony wg poniższych zasad:
-    - sekcję na desktop wykonano wedle designu [design](https://www.figma.com/file/dqY9uYrUYPyr5yjeECoy6X/Recruitment-Task)
+    - sekcję na desktop wykonano wedle [designu](https://www.figma.com/file/dqY9uYrUYPyr5yjeECoy6X/Recruitment-Task)
     - sekcja spełnia aspekty WCAG
     - sekcja jest responsywna
     - sekcja jest w kontenerze o max. szerokości 1440px
