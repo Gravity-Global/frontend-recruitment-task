@@ -1,4 +1,38 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom Properties */
+:root {
+    --ff-primary: "Roboto", sans-serif;
+
+    --fw-reg: 300;
+    --fw-mid: 500;
+    --fw-bold: 700;
+
+    --fs-body: 1rem;
+
+    --clr-light: #FFFFFF;
+    --clr-dark: #121212;
+    --clr-primary: #E4C1AE;
+    --clr-accent: #1C7947;
+    --clr-overlay: rgba(0, 0, 0, 0.5);
+}
+
+/* General styles */
+
+/* endable this to add smooth scrolling */
+/* html {
+    scroll-behavior: smooth;
+} */
+
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: red;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-reg);
+    line-height: 1.5rem;
 }
