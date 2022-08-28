@@ -152,5 +152,97 @@ main {
       border: 1px solid colors.$hover;
     }
   }
+}
 
+@media (min-width: 576px) {
+  .first-section {
+    text-align: left;
+
+    &__box {
+      flex-direction: row;
+      justify-content: space-between;
+
+      &-img {
+        width: 45%;
+      }
+
+      &-text {
+        width: 50%;
+      }
+    }
+
+    &__img {
+			margin-bottom: 0;
+			max-height: 330px;
+		}
+  }
+
+  .pop-up {
+    &__window {
+      padding: 40px 80px;
+    }
+
+    &__info {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .first-section {
+    padding: 90px 60px;
+
+    &__box {
+      align-items: center;
+      margin: 0 auto;
+      max-width: 980px;
+    }
+
+    .pop-up {
+      &__window {
+        padding: 56px 95px;
+        max-width: 920px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 4.2rem;
+  }
+
+  .first-section {
+    padding: 96px 60px;
+
+    &__box {
+      align-items: center;
+      justify-content: center;
+      height: 330px;
+
+      &-img {
+
+        width: 505px;
+      }
+
+      &-text {
+        margin-left: 95px;
+
+        width: 380px;
+      }
+    }
+
+    &__img {
+      margin-bottom: 0;
+			width: 505px;
+      height: 330px;
+      overflow: hidden;
+		}
+  }
+}
+
+@media (min-width: 1400px) {
+  .first-section {
+    padding: 96px 230px;
+  }
 }
