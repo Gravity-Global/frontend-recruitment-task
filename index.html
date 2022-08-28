@@ -18,26 +18,26 @@
   </head>
   <body>
     <section class="container">
-      <div class="img">
+      <div class="hero-img">
         <img src="" alt="" srcset="">
       </div>
-      <div class="content-left">
-        <h1 class="header-text">Lorem ipsum</h1>
-        <p class="header-paragraph">Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.
+      <main class="container__content">
+        <h1 class="container__content--heading">Lorem ipsum</h1>
+        <p class="container__content--description">Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.
         </p>
-      </div>
-      <button data-modal-target="#modal" type="button" class="btn btn-cta">Button</button>
-      <div class="modal" id="modal">
-        <div class="modal-header">
-          <h2 class="modal-alert">Alert!</h2>
-          <button type="button" data-close-button id="close-modal" class="btn close-btn">&times;</button>
-        </div>
-        <div class="modal-body">
+      </main>
+      <button data-modal-target="#modal" type="button" aria-label="Open modal button" class="btn btn-cta">Button</button>
+      <section class="modal" id="modal">
+        <header class="modal__header">
+          <h2 class="modal__header--title">Alert!</h2>
+          <button type="button" data-close-button id="close-modal" aria-label="Close modal button" class="btn close-btn">&times;</button>
+        </header>
+        <section class="modal__body">
           You have clicked <strong><span id="display-number"></span></strong> to related button.
-        </div>
+        </section>
         <!-- <input type="reset" value="Reset" class="btn reset-btn"> -->
-        <button type="reset" class="btn reset-btn">Reset counter</button>
-      </div>
+        <button type="reset" aria-label="Reset counter button" class="btn reset-btn">Reset counter</button>
+      </section>
       <div id="overlay"></div>
     </section>
   </body>
