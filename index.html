@@ -7,10 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>Agnieszka Uzarek - Recruitment task</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/f3198f14e9.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./dist/main.css">
 </head>
 
 <body>
-
   <main>
     <!-- main section -->
     <section class="first-section">
@@ -34,9 +41,30 @@
           </div>
         </div>
       </div>
+
+      <!-- pop-up -->
+      <div>
+        <div class="pop-up">
+          <div class="pop-up__background"></div>
+          <div class="pop-up__window">
+            <div class="pop-up__header">
+              <h1 class="pop-up__title title">Alert!</h1>
+              <button class="pop-up__close-btn close-btn">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="pop-up__content">
+              <p class="pop-up__info">You have clicked <strong><span class="count-display">0</span> times</strong> to
+                related button.</p>
+              <button class="btn pop-up__reset-btn hide">Reset & close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
+  <script src="./src/js/main.js"></script>
 </body>
 
 </html>
