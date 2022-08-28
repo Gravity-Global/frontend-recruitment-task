@@ -15,6 +15,7 @@ const countUp = () => {
 
 const openPopUp = () => {
   popUpWindow.style.display = 'block';
+  popUpCloseBtn.focus();
 }
 
 const closePopUp = () => {
