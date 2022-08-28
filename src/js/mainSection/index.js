@@ -17,7 +17,9 @@ function createModule(imageUrl, titleText, descriptionText, buttonText) {
 
   const title = createElement("h1", "title", titleText);
   const description = createElement("p", "description", descriptionText);
-  const button = createElement("button", "button", buttonText);
+  const button = createElement("button", "button-main", buttonText);
 
   contentDiv.append(title, description, button);
+
+  button.addEventListener("click", onMainButtonClick);
 }
