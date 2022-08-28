@@ -1,8 +1,8 @@
-export function createPopup() {
+function createPopup(titleText, descriptionText) {
   const createElement = (type, className, prop) => {
     const element = document.createElement(type);
     element.classList.add(className);
-    if (type === "h1" || type === "p" || type === "button")
+    if (type === "h1" || type === "p" || type === "button" || type === "span")
       element.textContent = prop;
     else if (type === "img") element.setAttribute("src", prop);
     return element;
@@ -18,4 +18,14 @@ export function createPopup() {
   const popUpContentDiv = createElement("div", "popUpContent");
 
   popUpDiv.append(closeDiv, popUpContentDiv);
+
+  const closeButton = createElement("div", "close-button");
+  closeDiv.appendChild(closeButton);
+
+  const xIcon = createElement("span", "x-icon", "+");
+  closeButton.append(xIcon);
+
+  const title = createElement("h1", "title", titleText);
+  const content = createElement("p", "description", descriptionText);
+  popUpContentDiv.append(title, content);
 }

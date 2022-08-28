@@ -5,5 +5,8 @@ const titleText = "Lorem Ipsum";
 const descriptionText = `Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.`;
 const buttonText = "Button";
 
+const alertTitle = "Alert!";
+const alertText = `You have clicked X times to related button`;
+
 createModule(imagePath, titleText, descriptionText, buttonText);
-createPopup();
+createPopup(alertTitle, alertText);
