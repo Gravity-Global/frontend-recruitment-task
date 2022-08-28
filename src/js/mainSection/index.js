@@ -1,35 +1,23 @@
 function createModule(imageUrl, titleText, descriptionText, buttonText) {
-  const createDiv = () => document.createElement("div");
-  const addClass = (element, className) => element.classList.add(className);
-
-  const createSection = className => {
-    const div = createDiv();
-    addClass(div, className);
-    return document.querySelector(".main-container").appendChild(div);
+  const createElement = (type, className, prop) => {
+    const element = document.createElement(type);
+    element.classList.add(className);
+    if (type === "h1" || type === "p" || type === "button")
+      element.textContent = prop;
+    else if (type === "img") element.setAttribute("src", prop);
+    return element;
   };
 
-  //adding two columns to main-container
-  const imageDiv = createSection("image-section");
-  const contentDiv = createSection("content-section");
+  const imageDiv = createElement("div", "image-section");
+  const contentDiv = createElement("div", "content-section");
+  document.querySelector(".main-container").append(imageDiv, contentDiv);
 
-  //adding image to image-section
-  const image = document.createElement("img");
-  addClass(image, "image");
-  image.setAttribute("src", imageUrl);
+  const image = createElement("img", "image", imageUrl);
   imageDiv.appendChild(image);
 
-  //adding content to content-section
-  const title = document.createElement("h1");
-  addClass(title, "title");
-  title.textContent = titleText;
-
-  const description = document.createElement("p");
-  addClass(description, "description");
-  description.textContent = descriptionText;
-
-  const button = document.createElement("button");
-  addClass(button, "button");
-  button.textContent = buttonText;
+  const title = createElement("h1", "title", titleText);
+  const description = createElement("p", "description", descriptionText);
+  const button = createElement("button", "button", buttonText);
 
   contentDiv.append(title, description, button);
 }
