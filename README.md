@@ -1,3 +1,8 @@
+![Małgorzata Krawczuk - Recruitment task2](https://user-images.githubusercontent.com/71946846/187184548-b581efc6-fe18-4c67-ace8-9e4d5c834aec.png)
+![Małgorzata Krawczuk - Recruitment task3](https://user-images.githubusercontent.com/71946846/187184553-da434ccb-c9fc-4709-bf41-f2c3ec57dbf8.png)
+![Małgorzata Krawczuk - Recruitment task-localStorage](https://user-images.githubusercontent.com/71946846/187184555-112ea039-3c91-4111-b9d6-d92adf389b65.png)
+![recruitment-task-final-prt-sc](https://user-images.githubusercontent.com/71946846/187184592-21aaba82-82cc-406e-b78d-ece0dd5718c4.png)
+![Małgorzata Krawczuk - Recruitment task1](https://user-images.githubusercontent.com/71946846/187184626-7b45bcda-e17a-476a-9a05-336fdc07e734.png)
 # Zadanie rekrutacyjne GravityGlobal na frontend developera
 
 ## Informacje wstępne
