@@ -1,15 +1,14 @@
-function createPopup(titleText) {
-  const createElement = (type, className, prop) => {
-    const element = document.createElement(type);
-    element.classList.add(className);
-    if (type === "h1" || type === "p" || type === "button" || type === "span")
-      element.textContent = prop;
-    else if (type === "img") element.setAttribute("src", prop);
-    return element;
+import { createElement } from "./createElement.js";
+
+export function createPopup(titleText) {
+  const onResetButtonClick = () => {
+    localStorage.setItem("counter", 0);
+    document.getElementById("alertContent").textContent =
+      "No click detected to related button";
   };
 
   const mainDiv = createElement("div", "blured");
-  document.querySelector(".main-container").appendChild(mainDiv);
+  document.querySelector(".mainContainer").appendChild(mainDiv);
 
   mainDiv.addEventListener("click", event => {
     event.stopPropagation();
@@ -25,7 +24,7 @@ function createPopup(titleText) {
 
   popUpDiv.append(closeDiv, popUpContentDiv);
 
-  const closeButton = createElement("div", "close-button");
+  const closeButton = createElement("div", "closeButton");
   closeDiv.appendChild(closeButton);
 
   const xIcon = createElement("span", "x-icon", "+");
@@ -33,9 +32,9 @@ function createPopup(titleText) {
 
   const title = createElement("h1", "title", titleText);
   const content = createElement("p", "description", "");
-  content.setAttribute("id", "alert-content");
+  content.setAttribute("id", "alertContent");
   const resetButton = createElement("button", "button", "Reset");
-  resetButton.setAttribute("id", "reset-button");
+  resetButton.setAttribute("id", "resetButton");
   resetButton.addEventListener("click", onResetButtonClick);
 
   popUpContentDiv.append(title, content, resetButton);

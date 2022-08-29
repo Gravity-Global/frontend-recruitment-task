@@ -1,9 +1,9 @@
-$container-width: 1440px;
-$dark-color: rgba(18, 18, 18, 1);
-$primary-color: rgba(228, 193, 174, 1);
-$button-radius: 32px;
-$button-text-color: rgba(255, 255, 255, 1);
-$blured-color: rgba(18, 18, 18, 0.5);
+$containerWidth: 1440px;
+$darkColor: rgba(18, 18, 18, 1);
+$primaryColor: rgba(228, 193, 174, 1);
+$buttonRadius: 32px;
+$buttonTextColor: rgba(255, 255, 255, 1);
+$bluredColor: rgba(18, 18, 18, 0.5);
 
 @mixin section {
   width: 50%;
@@ -24,20 +24,20 @@ $blured-color: rgba(18, 18, 18, 0.5);
   padding: 16px 40px;
   width: 128px;
   height: 48px;
-  background-color: $primary-color;
-  border-radius: $button-radius;
+  background-color: $primaryColor;
+  border-radius: $buttonRadius;
   font-weight: 700;
   font-size: 16px;
   line-height: 100%;
   flex: none;
   order: 0;
   flex-grow: 0;
-  color: $button-text-color;
+  color: $buttonTextColor;
   cursor: pointer;
 }
 
-.main-container {
-  max-width: $container-width;
+.mainContainer {
+  max-width: $containerWidth;
   width: 100%;
   height: 100%;
   margin: auto;
@@ -45,14 +45,14 @@ $blured-color: rgba(18, 18, 18, 0.5);
   flex-direction: row;
 }
 
-.image-section {
+.imageSection {
   @include section;
   .image {
     margin: 10%;
   }
 }
 
-.content-section {
+.contentSection {
   @include section;
   margin: 5% 15% 5% 5%;
 
@@ -61,7 +61,7 @@ $blured-color: rgba(18, 18, 18, 0.5);
     font-weight: 700;
     font-size: 42px;
     line-height: 120%;
-    color: $dark-color;
+    color: $darkColor;
   }
 
   .description {
@@ -69,7 +69,7 @@ $blured-color: rgba(18, 18, 18, 0.5);
     font-weight: 300;
     font-size: 16px;
     line-height: 150%;
-    color: $dark-color;
+    color: $darkColor;
     margin-bottom: 50px;
   }
 
@@ -82,15 +82,14 @@ $blured-color: rgba(18, 18, 18, 0.5);
 .blured {
   display: none;
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background-color: $blured-color;
+  background-color: $bluredColor;
   z-index: 10;
 
   .popup {
-    display: block;
     background-color: rgba(255, 255, 255, 1);
     width: 60%;
     height: 250px;
@@ -104,7 +103,7 @@ $blured-color: rgba(18, 18, 18, 0.5);
       display: flex;
       justify-content: flex-end;
 
-      .close-button {
+      .closeButton {
         padding: 10px;
         width: 24px;
         height: 24px;
