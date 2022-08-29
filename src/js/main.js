@@ -10,15 +10,29 @@ const buttonMainText = "Button";
 const alertTitle = "Alert!";
 
 const onMainButtonClick = () => {
-  counter += 1;
+  counter = Number(localStorage.getItem("counter")) + 1;
+  localStorage.setItem("counter", counter);
+
   let timeString = "";
+  let displayResetButton = "";
+
   counter === 1 ? (timeString = "time") : (timeString = "times");
+  counter >= 5 ? (displayResetButton = "block") : (displayResetButton = "none");
 
   document.getElementById(
     "alert-content"
   ).textContent = `You have clicked ${counter} ${timeString} to related button`;
 
   document.getElementsByClassName("blured")[0].style.display = "flex";
+
+  document.getElementById("reset-button").style.display = displayResetButton;
+};
+
+const onResetButtonClick = () => {
+  localStorage.setItem("counter", 0);
+  counter = Number(localStorage.getItem("counter"));
+  document.getElementById("alert-content").textContent =
+    "No click detected to related button";
 };
 
 createPopup(alertTitle);

@@ -34,5 +34,9 @@ function createPopup(titleText) {
   const title = createElement("h1", "title", titleText);
   const content = createElement("p", "description", "");
   content.setAttribute("id", "alert-content");
-  popUpContentDiv.append(title, content);
+  const resetButton = createElement("button", "button", "Reset");
+  resetButton.setAttribute("id", "reset-button");
+  resetButton.addEventListener("click", onResetButtonClick);
+
+  popUpContentDiv.append(title, content, resetButton);
 }
