@@ -139,22 +139,30 @@ h1, h2 {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
-    border: 1px solid var(--clr-dark);
     z-index: 10;
     width: 920px;
     max-width: 80%;
+    padding: 2.875rem;
   }
 
   .modal.active {
     transform: translate(-50%, -50%) scale(1);
   }
 
+  .modal__header,
+  .modal__body {
+    padding-left:  3.063rem;
+  }
+
   .modal__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 15px;
     display: flex;
+  }
+
+  .modal__header--title {
+    padding-top: 0.6rem;
   }
 
   .modal__header .close-btn {
@@ -163,13 +171,9 @@ h1, h2 {
     outline: none;
     background: none;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: var(--fw-mid);
     align-self: flex-start;
     color: var(--clr-black);
-  }
-
-  .modal__body {
-    padding: 10px 15px;
   }
 
   .reset-btn {
