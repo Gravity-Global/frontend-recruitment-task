@@ -185,20 +185,47 @@ h2 {
 }
 
 @media(min-width: 1000px) {
+    .container__content--heading {
+        padding-bottom: 0.75rem;
+    }
+
+    .container__content--description {
+        padding-bottom: 1rem;
+    }
+}
+
+
+@media(min-width: 1200px) {
     .container__content {
         padding-top: 2.5rem;
+    }
+
+    .container__content--heading {
+        margin: 0;
+        padding-bottom: 1.5rem;
+    }
+
+    .container__content--description {
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media(min-width: 1300px) {
+    .container__content {
+        padding-bottom: 3rem;
+ 
+    }
+
+    .container__content--heading {
+        margin-top: 3.4rem;
+        padding-bottom: 2rem;
     }
 
     .container__content--description {
         padding-bottom: 2rem;
     }
-
-    .container__content--heading {
-        padding-bottom: 1.5rem;
-    }
-
 }
-
 
 /* Modal */
 
@@ -244,6 +271,10 @@ h2 {
   font-weight: var(--fw-mid);
   align-self: flex-start;
   color: var(--clr-black);
+}
+
+.modal__body--title {
+    padding-bottom: 2rem;
 }
 
 .reset-btn {
