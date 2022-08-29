@@ -11,8 +11,16 @@ const alertTitle = "Alert!";
 
 const onMainButtonClick = () => {
   counter += 1;
-  const alertText = `You have clicked ${counter} times to related button`;
-  createPopup(alertTitle, alertText);
+  let timeString = "";
+  counter === 1 ? (timeString = "time") : (timeString = "times");
+
+  document.getElementById(
+    "alert-content"
+  ).textContent = `You have clicked ${counter} ${timeString} to related button`;
+
+  document.getElementsByClassName("blured")[0].style.display = "flex";
 };
+
+createPopup(alertTitle);
 
 createModule(imagePath, titleText, descriptionText, buttonMainText);

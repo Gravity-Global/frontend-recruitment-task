@@ -1,4 +1,4 @@
-function createPopup(titleText, descriptionText) {
+function createPopup(titleText) {
   const createElement = (type, className, prop) => {
     const element = document.createElement(type);
     element.classList.add(className);
@@ -10,6 +10,12 @@ function createPopup(titleText, descriptionText) {
 
   const mainDiv = createElement("div", "blured");
   document.querySelector(".main-container").appendChild(mainDiv);
+
+  mainDiv.addEventListener("click", event => {
+    event.stopPropagation();
+    if (event.target === xIcon || event.target === mainDiv)
+      mainDiv.style.display = "none";
+  });
 
   const popUpDiv = createElement("div", "popup");
   mainDiv.appendChild(popUpDiv);
@@ -26,6 +32,7 @@ function createPopup(titleText, descriptionText) {
   closeButton.append(xIcon);
 
   const title = createElement("h1", "title", titleText);
-  const content = createElement("p", "description", descriptionText);
+  const content = createElement("p", "description", "");
+  content.setAttribute("id", "alert-content");
   popUpContentDiv.append(title, content);
 }
