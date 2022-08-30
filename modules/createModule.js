@@ -1,23 +1,24 @@
-import { createElement } from "./createElement.js";
-import { createPopup } from "./createPopup.js";
+import { createElement, createPopup } from "./helpers.js";
 
-let counter = 0;
-
-export function createModule(imageUrl, titleText, descriptionText, buttonText) {
-  const alertTitle = "Alert!";
-
+export function createModule(
+  imageUrl,
+  titleText,
+  descriptionText,
+  buttonText,
+  alertTitle
+) {
   const onMainButtonClick = () => {
-    counter = Number(localStorage.getItem("counter")) + 1;
+    const counter = Number(localStorage.getItem("counter")) + 1;
     localStorage.setItem("counter", counter);
 
-    let timeString = counter === 1 ? "time" : "times";
-    let displayResetButton = counter >= 5 ? "block" : "none";
+    const timeString = counter === 1 ? "time" : "times";
+    const displayResetButton = counter >= 5 ? "block" : "none";
 
     document.getElementById(
       "alertContent"
     ).textContent = `You have clicked ${counter} ${timeString} to related button`;
 
-    document.getElementsByClassName("blured")[0].style.display = "flex";
+    document.getElementById("blured").style.display = "flex";
 
     document.getElementById("resetButton").style.display = displayResetButton;
   };

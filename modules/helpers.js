@@ -1,13 +1,22 @@
-import { createElement } from "./createElement.js";
+export const createElement = (type, className, prop) => {
+  const element = document.createElement(type);
+  element.classList.add(className);
+  if (type === "h1" || type === "p" || type === "button" || type === "span")
+    element.textContent = prop;
+  else if (type === "img") element.setAttribute("src", prop);
+  return element;
+};
 
 export function createPopup(titleText) {
   const onResetButtonClick = () => {
     localStorage.setItem("counter", 0);
     document.getElementById("alertContent").textContent =
       "No click detected to related button";
+    document.getElementById("resetButton").style.display = "none";
   };
 
   const mainDiv = createElement("div", "blured");
+  mainDiv.setAttribute("id", "blured");
   document.querySelector(".mainContainer").appendChild(mainDiv);
 
   mainDiv.addEventListener("click", event => {

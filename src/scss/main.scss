@@ -5,6 +5,9 @@ $buttonRadius: 32px;
 $buttonTextColor: rgba(255, 255, 255, 1);
 $bluredColor: rgba(18, 18, 18, 0.5);
 
+$s: 768px;
+$m: 1024px;
+
 @mixin section {
   width: 50%;
   height: 100%;
@@ -20,7 +23,7 @@ $bluredColor: rgba(18, 18, 18, 0.5);
 @mixin button {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   padding: 16px 40px;
   width: 128px;
   height: 48px;
@@ -133,6 +136,38 @@ $bluredColor: rgba(18, 18, 18, 0.5);
         @include fontType;
         @include button;
       }
+    }
+  }
+}
+
+@media screen and (max-width: $m) {
+  .contentSection {
+    margin: 2% 5%;
+  }
+}
+
+@media screen and (max-width: $s) {
+  .mainContainer {
+    flex-direction: column;
+    .imageSection,
+    .contentSection {
+      width: 80%;
+      margin: 0 10%;
+      justify-content: center;
+      .title {
+        text-align: center;
+      }
+      .description {
+        text-align: justify;
+      }
+      .image {
+        margin: 10% 0;
+      }
+    }
+  }
+  .blured {
+    .popup {
+      width: 90%;
     }
   }
 }
