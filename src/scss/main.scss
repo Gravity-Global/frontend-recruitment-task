@@ -1,8 +1,12 @@
-$container-width: 1440px;
-$dark-color: rgba(18, 18, 18, 1);
-$primary-color: rgba(228, 193, 174, 1);
-$button-radius: 32px;
-$button-text-color: rgba(255, 255, 255, 1);
+$containerWidth: 1440px;
+$darkColor: rgba(18, 18, 18, 1);
+$primaryColor: rgba(228, 193, 174, 1);
+$buttonRadius: 32px;
+$buttonTextColor: rgba(255, 255, 255, 1);
+$bluredColor: rgba(18, 18, 18, 0.5);
+
+$s: 768px;
+$m: 1024px;
 
 @mixin section {
   width: 50%;
@@ -16,23 +20,42 @@ $button-text-color: rgba(255, 255, 255, 1);
   font-style: normal;
 }
 
-.main-container {
-  max-width: $container-width;
+@mixin button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 40px;
+  width: 128px;
+  height: 48px;
+  background-color: $primaryColor;
+  border-radius: $buttonRadius;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  color: $buttonTextColor;
+  cursor: pointer;
+}
+
+.mainContainer {
+  max-width: $containerWidth;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin: auto;
   display: flex;
   flex-direction: row;
 }
 
-.image-section {
+.imageSection {
   @include section;
   .image {
     margin: 10%;
   }
 }
 
-.content-section {
+.contentSection {
   @include section;
   margin: 5% 15% 5% 5%;
 
@@ -41,7 +64,7 @@ $button-text-color: rgba(255, 255, 255, 1);
     font-weight: 700;
     font-size: 42px;
     line-height: 120%;
-    color: $dark-color;
+    color: $darkColor;
   }
 
   .description {
@@ -49,27 +72,102 @@ $button-text-color: rgba(255, 255, 255, 1);
     font-weight: 300;
     font-size: 16px;
     line-height: 150%;
-    color: $dark-color;
+    color: $darkColor;
     margin-bottom: 50px;
   }
 
   .button {
+    @include fontType;
+    @include button;
+  }
+}
+
+.blured {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $bluredColor;
+  z-index: 10;
+
+  .popup {
+    background-color: rgba(255, 255, 255, 1);
+    width: 60%;
+    height: 250px;
+    margin: auto;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 16px 40px;
-    width: 128px;
-    height: 48px;
-    background-color: $primary-color;
-    border-radius: $button-radius;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 100%;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    color: $button-text-color;
+    flex-direction: column;
+
+    .close {
+      width: 100%;
+      height: 20%;
+      display: flex;
+      justify-content: flex-end;
+
+      .closeButton {
+        padding: 10px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+
+        .x-icon {
+          font-size: 30px;
+          font-weight: 400;
+          display: inline-block;
+          transform: rotate(45deg);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .popUpContent {
+      width: 100%;
+      height: 80%;
+
+      .title,
+      .description {
+        margin-left: 10%;
+      }
+
+      .button {
+        margin-left: 10%;
+        @include fontType;
+        @include button;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $m) {
+  .contentSection {
+    margin: 2% 5%;
+  }
+}
+
+@media screen and (max-width: $s) {
+  .mainContainer {
+    flex-direction: column;
+    .imageSection,
+    .contentSection {
+      width: 80%;
+      margin: 0 10%;
+      justify-content: center;
+      .title {
+        text-align: center;
+      }
+      .description {
+        text-align: justify;
+      }
+      .image {
+        margin: 10% 0;
+      }
+    }
+  }
+  .blured {
+    .popup {
+      width: 90%;
+    }
   }
 }
