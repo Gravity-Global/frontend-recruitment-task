@@ -7,7 +7,7 @@ export const createElement = (type, className, prop) => {
   return element;
 };
 
-export function createPopup(titleText) {
+export async function createPopup(titleText) {
   const onResetButtonClick = () => {
     localStorage.setItem("counter", 0);
     document.getElementById("alertContent").textContent =
@@ -20,9 +20,10 @@ export function createPopup(titleText) {
   document.querySelector(".mainContainer").appendChild(mainDiv);
 
   mainDiv.addEventListener("click", event => {
-    event.stopPropagation();
-    if (event.target === xIcon || event.target === mainDiv)
+    if (event.target === xIcon || event.target === mainDiv) {
       mainDiv.style.display = "none";
+      popUpContentDiv.removeChild(document.querySelector(".table"));
+    }
   });
 
   const popUpDiv = createElement("div", "popup");
@@ -30,6 +31,7 @@ export function createPopup(titleText) {
 
   const closeDiv = createElement("div", "close");
   const popUpContentDiv = createElement("div", "popUpContent");
+  popUpContentDiv.setAttribute("id", "popUpContent");
 
   popUpDiv.append(closeDiv, popUpContentDiv);
 
@@ -46,5 +48,28 @@ export function createPopup(titleText) {
   resetButton.setAttribute("id", "resetButton");
   resetButton.addEventListener("click", onResetButtonClick);
 
-  popUpContentDiv.append(title, content, resetButton);
+  const loaderDiv = createElement("div", "loaderDiv");
+
+  popUpContentDiv.append(title, content, resetButton, loaderDiv);
+
+  const loader = createElement("span", "loader");
+  loader.setAttribute("id", "loader");
+
+  loaderDiv.appendChild(loader);
+}
+
+export function createTable(tableData) {
+  const table = document.createElement("table");
+  table.classList.add("table");
+  let row = {};
+  let cell = {};
+
+  tableData.forEach(rowData => {
+    row = table.insertRow(-1);
+    rowData.forEach(cellData => {
+      cell = row.insertCell();
+      cell.textContent = cellData;
+    });
+  });
+  return table;
 }

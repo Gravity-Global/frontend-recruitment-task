@@ -1,4 +1,4 @@
-import { createModule } from "../../modules/createModule.js";
+import { createModule } from "/modules/createModule.js";
 
 const clientWidth = window.innerWidth;
 
@@ -23,4 +23,13 @@ const descriptionText =
 const buttonMainText = "Button";
 const alertTitle = "Alert!";
 
-createModule(imagePath, titleText, descriptionText, buttonMainText, alertTitle);
+const TABLE_DATA_URL = "https://jsonplaceholder.typicode.com/users/";
+
+createModule(
+  imagePath,
+  titleText,
+  descriptionText,
+  buttonMainText,
+  alertTitle,
+  TABLE_DATA_URL
+);
