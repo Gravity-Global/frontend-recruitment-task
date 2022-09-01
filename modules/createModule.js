@@ -1,13 +1,16 @@
-import { createElement, createPopup } from "./helpers.js";
+import { createElement } from "/modules/helpers.js";
+import { createPopup } from "/modules/createPopUp.js";
+import { createTable } from "/modules/createTable.js";
 
 export function createModule(
   imageUrl,
   titleText,
   descriptionText,
   buttonText,
-  alertTitle
+  alertTitle,
+  fetchData
 ) {
-  const onMainButtonClick = () => {
+  const onMainButtonClick = async () => {
     const counter = Number(localStorage.getItem("counter")) + 1;
     localStorage.setItem("counter", counter);
 
@@ -18,9 +21,15 @@ export function createModule(
       "alertContent"
     ).textContent = `You have clicked ${counter} ${timeString} to related button`;
 
-    document.getElementById("blured").style.display = "flex";
-
+    document.getElementById("blurred").style.display = "flex";
     document.getElementById("resetButton").style.display = displayResetButton;
+
+    document.getElementById("loader").style.display = "inline-block";
+    const people = await fetchData();
+    document.getElementById("loader").style.display = "none";
+
+    const table = createTable(people);
+    document.querySelector("#popUpContent").appendChild(table);
   };
 
   const imageDiv = createElement("div", "imageSection");

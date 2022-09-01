@@ -3,7 +3,7 @@ $darkColor: rgba(18, 18, 18, 1);
 $primaryColor: rgba(228, 193, 174, 1);
 $buttonRadius: 32px;
 $buttonTextColor: rgba(255, 255, 255, 1);
-$bluredColor: rgba(18, 18, 18, 0.5);
+$blurredColor: rgba(18, 18, 18, 0.5);
 
 $s: 768px;
 $m: 1024px;
@@ -82,20 +82,19 @@ $m: 1024px;
   }
 }
 
-.blured {
+.blurred {
   display: none;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: $bluredColor;
+  background-color: $blurredColor;
   z-index: 10;
 
   .popup {
     background-color: rgba(255, 255, 255, 1);
     width: 60%;
-    height: 250px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -136,6 +135,39 @@ $m: 1024px;
         @include fontType;
         @include button;
       }
+
+      .table {
+        margin-top: 10px;
+        td {
+          border: 1px solid $darkColor;
+        }
+      }
+
+      .loaderDiv {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+
+        .loader {
+          width: 50px;
+          height: 50px;
+          border: 5px solid $primaryColor;
+          border-bottom-color: transparent;
+          border-radius: 50%;
+          box-sizing: border-box;
+          animation: rotation 1s linear infinite;
+        }
+      }
+
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
     }
   }
 }
@@ -165,7 +197,7 @@ $m: 1024px;
       }
     }
   }
-  .blured {
+  .blurred {
     .popup {
       width: 90%;
     }
