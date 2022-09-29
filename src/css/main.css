@@ -1,0 +1,170 @@
+html{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+}
+body{
+    background-color: #E5E5E5;
+    margin: 5px;
+}
+.imageLarge{
+    display: flex;
+    margin: 5px;
+    width: 505px;
+    height: 330px;
+}
+.contener{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: calc(12% - 505px/2 + 300px);
+    margin-top: calc(4.5% - 330px/2 + 200px);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    margin-left: calc(13% - 380px/2 + 100px); 
+}
+h1{
+    display: flex;
+    flex-direction: column;
+    margin-block-end: 24px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 100%;
+}
+.p1{
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 0px;
+    margin-block-end: 32px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: #121212;
+}
+.button1 {
+    display: flex;
+    align-items: flex-start;
+    width: 128px;
+    height: 48px;
+    margin-block-start: 0px;
+    background: #E4C1AE;
+    border-radius: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 40px;
+    gap: 10px;
+    cursor: pointer;
+}
+.buttonText {
+    width: 48px;
+    height: 16px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FFFFFF;
+    display: flex;
+    flex-grow: 0;
+    cursor: pointer;
+}
+.popupLook{
+    position: absolute;
+    width: 920px;
+    height: 210px;
+    left: 260px;
+    top: 375px;
+    opacity: 1;
+    background: #FFFFFF;
+}
+.icon{
+    position: absolute;
+    left: calc(100% - 1102px/2 + 400px);
+    top: calc(30% - 421px/2 + 250px);
+    cursor: pointer;
+}
+.overlayHidden{
+    display: none;
+}
+.overlay{
+    position: absolute;
+    width: 1440px;
+    height: 960px;
+    left: 0px;
+    top: 0px;
+    background: #121212;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.popupTitle{
+    position: absolute;
+    width: 380px;
+    height: 50px;
+    left: calc(50% - 380px/2 - 175px);
+    top: calc(50% - 50px/2 - 24px);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 120%;
+    color: #121212;
+    opacity: 1;
+}
+.pupupBody{
+    position: absolute;
+    width: 380px;
+    height: 24px;
+    left: calc(50% - 380px/2 - 175px);
+    top: calc(50% - 24px/2 + 37px);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: #121212;
+    opacity: 1;
+}
+.pupupBodyN{
+    position: absolute;
+    width: 380px;
+    height: 24px;
+    left: calc(50% - 380px/2 - 60px);
+    top: calc(50% - 24px/2 + 37px);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: #121212;
+    opacity: 1;
+}
+.pupupBodyRest{
+    position: absolute;
+    width: 380px;
+    height: 24px;
+    left: calc(50% - 380px/2 - 45px);
+    top: calc(50% - 24px/2 + 37px);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: #121212;
+    opacity: 1;
+}
+.Vector{
+    position: absolute;
+    left: calc(100% - 1102px/2 + 500px);
+    top: calc(30% - 421px/2 + 200px);
+    cursor: pointer;
+}
